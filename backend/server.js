@@ -21,6 +21,13 @@ mongoose
   .then(() => console.log("MongoDB conectado"))
   .catch((err) => console.log(err));
 
+// Rotas
+const receitasRouter = require("./routes/receitas");
+const despesasRouter = require("./routes/despesas");
+
+app.use("/api/receitas", receitasRouter);
+app.use("/api/despesas", despesasRouter);
+
 // Rota inicial de teste
 app.get("/", (req, res) => {
   res.send("API do Controle de Finanças");
