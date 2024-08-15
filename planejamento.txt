@@ -1,0 +1,8 @@
+4. Planejamento Inicial
+Etapa 1: Configuração inicial do projeto Next.js e Node.js com MongoDB.
+Etapa 2: Implementação da autenticação de usuário e gerenciamento de sessões.
+Etapa 3: Desenvolvimento da interface do Dashboard com Tailwind CSS.
+Etapa 4: Integração com APIs de pagamento (Mercado Pago, Nubank, PicPay).
+Etapa 5: Implementação das funcionalidades de gerenciamento de receitas e despesas.
+Etapa 6: Criação dos gráficos e relatórios.
+Etapa 7: Testes e refinamento do projeto.

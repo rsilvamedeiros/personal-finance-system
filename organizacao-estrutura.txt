@@ -1,0 +1,16 @@
+├── backend
+│   ├── controllers
+│   ├── models
+│   ├── routes
+│   ├── utils
+│   ├── config
+│   └── app.js
+├── frontend
+│   ├── components
+│   ├── pages
+│   ├── public
+│   ├── styles
+│   ├── utils
+│   ├── hooks
+│   └── tailwind.config.js
+└── .env
