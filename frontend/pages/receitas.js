@@ -1,26 +1,28 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import ReceitaForm from "../components/ReceitaForm";
+import ReceitaList from "../components/ReceitaList";
 
-export default function Receitas() {
+const Receitas = () => {
   const [receitas, setReceitas] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/receitas")
-      .then((response) => setReceitas(response.data))
-      .catch((error) => console.error("Erro ao buscar receitas:", error));
+    const fetchReceitas = async () => {
+      const response = await axios.get("/api/receitas");
+      setReceitas(response.data);
+    };
+    fetchReceitas();
   }, []);
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold">Receitas</h1>
-      <ul>
-        {receitas.map((receita) => (
-          <li key={receita._id}>
-            {receita.descricao}: R${receita.valor}
-          </li>
-        ))}
-      </ul>
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Receitas</h1>
+      <ReceitaForm
+        onAdd={(novaReceita) => setReceitas([...receitas, novaReceita])}
+      />
+      <ReceitaList receitas={receitas} />
     </div>
   );
-}
+};
+
+export default Receitas;
