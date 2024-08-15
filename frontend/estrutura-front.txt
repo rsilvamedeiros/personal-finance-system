@@ -1,0 +1,12 @@
+frontend/
+├── components/
+│   ├── Layout.js
+├── pages/
+│   ├── index.js
+│   ├── _app.js
+├── public/
+├── styles/
+│   ├── globals.css
+├── tailwind.config.js
+├── postcss.config.js
+└── package.json
