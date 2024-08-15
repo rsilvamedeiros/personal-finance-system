@@ -1,0 +1,44 @@
+Escopo do Projeto: Controle de Finanças Pessoais
+1. Objetivos do Projeto
+Desenvolver um aplicativo para gerenciamento de finanças pessoais.
+Integrar com sistemas de pagamento como Mercado Pago, Nubank e PicPay.
+Implementar gráficos para visualização de dados financeiros.
+Listar e categorizar gastos e receitas.
+Desenvolver um dashboard com relatórios detalhados.
+Utilizar Tailwind CSS para um layout moderno e responsivo.
+Backend robusto utilizando Node.js e MongoDB.
+2. Principais Funcionalidades
+2.1. Autenticação de Usuário
+Login/Logout: Gerenciamento de sessões de usuários.
+Cadastro de Usuário: Registro de novos usuários com validação de dados.
+2.2. Integrações de Pagamento
+Mercado Pago, Nubank, PicPay: Implementação de APIs para receber e categorizar transações automaticamente.
+2.3. Dashboard e Gráficos
+Dashboard Principal: Visão geral das finanças, incluindo saldo atual, receitas e despesas.
+Gráficos de Desempenho: Gráficos de barras, linhas e pizza para visualização de gastos, receitas, e balanço mensal.
+2.4. Gerenciamento de Receitas e Despesas
+Cadastro de Receitas: Interface para adicionar e gerenciar fontes de renda.
+Cadastro de Despesas: Interface para adicionar e gerenciar despesas com categorização (ex: alimentação, transporte, etc.).
+Listagem de Transações: Exibição detalhada de todas as transações, filtradas por crédito, débito, data, categoria, etc.
+2.5. Relatórios e Análises
+Relatórios Mensais: Resumo financeiro mensal com gráficos e insights.
+Relatórios Anuais: Visão geral do ano, com análise de tendências e projeções.
+2.6. Menu Lateral
+Navegação: Links para Dashboard, Receitas, Despesas, Relatórios, Configurações de Integração, etc.
+Estrutura Modular: Facilmente expansível para adicionar novas funcionalidades.
+2.7. Configurações
+Gerenciamento de Categorias: Adicionar, editar e remover categorias de despesas e receitas.
+Configurações de Integração: Conectar e desconectar integrações com Mercado Pago, Nubank e PicPay.
+3. Arquitetura do Sistema
+3.1. Frontend
+Framework: Next.js (React)
+Estilização: Tailwind CSS
+Gerenciamento de Estado: Context API ou Redux (se necessário)
+3.2. Backend
+Framework: Node.js com Express
+Banco de Dados: MongoDB para armazenamento de dados financeiros e transações
+Autenticação: JWT (JSON Web Token) para proteção das rotas e sessões
+Integrações: APIs RESTful para Mercado Pago, Nubank, e PicPay
+3.3. Infraestrutura
+Deploy: Vercel (para o frontend Next.js) e Heroku ou outro provedor para o backend
+Versionamento de Código: Git com GitHub
