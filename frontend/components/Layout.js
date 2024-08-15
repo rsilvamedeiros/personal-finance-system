@@ -1,13 +1,23 @@
+import Link from "next/link";
+
 const Layout = ({ children }) => {
   return (
     <div className="min-h-screen flex">
       <aside className="w-64 bg-gray-800 text-white p-4">
         <nav>
           <ul>
-            <li className="mb-2">Dashboard</li>
-            <li className="mb-2">Receitas</li>
-            <li className="mb-2">Despesas</li>
-            <li>Relatórios</li>
+            <li className="mb-2">
+              <Link href="/">Dashboard</Link>
+            </li>
+            <li className="mb-2">
+              <Link href="/receitas">Receitas</Link>
+            </li>
+            <li className="mb-2">
+              <Link href="/despesas">Despesas</Link>
+            </li>
+            <li className="mb-2">
+              <Link href="/relatorios">Relatórios</Link>
+            </li>
           </ul>
         </nav>
       </aside>
