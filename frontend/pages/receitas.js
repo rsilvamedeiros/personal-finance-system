@@ -8,8 +8,12 @@ const Receitas = () => {
 
   useEffect(() => {
     const fetchReceitas = async () => {
-      const response = await axios.get("/api/receitas");
-      setReceitas(response.data);
+      try {
+        const response = await axios.get("/api/receitas");
+        setReceitas(response.data);
+      } catch (error) {
+        console.error("Erro ao buscar receitas:", error);
+      }
     };
     fetchReceitas();
   }, []);

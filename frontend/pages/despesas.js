@@ -8,8 +8,12 @@ const Despesas = () => {
 
   useEffect(() => {
     const fetchDespesas = async () => {
-      const response = await axios.get("/api/despesas");
-      setDespesas(response.data);
+      try {
+        const response = await axios.get("/api/despesas");
+        setDespesas(response.data);
+      } catch (error) {
+        console.error("Erro ao buscar despesas:", error);
+      }
     };
     fetchDespesas();
   }, []);

@@ -5,9 +5,11 @@ const Receita = require("../models/Receita");
 // Obter todas as receitas
 router.get("/", async (req, res) => {
   try {
+    console.log("Requisição GET para /api/receitas recebida");
     const receitas = await Receita.find();
     res.json(receitas);
   } catch (err) {
+    console.error("Erro ao buscar receitas:", err);
     res.status(500).json({ message: err.message });
   }
 });

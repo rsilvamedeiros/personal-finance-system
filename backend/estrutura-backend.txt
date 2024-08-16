@@ -1,7 +1,14 @@
 backend/
+├── config/
+│   ├── db.js
 ├── models/
+│   ├── Despesa.js
+│   ├── Receita.js
+├── node_modules/
 ├── routes/
+│   ├── despesas.js
+│   ├── receitas.js
 ├── server.js
+├── testConnection.js
 ├── .env
-├── package.json
-└── node_modules/
+└── package.json

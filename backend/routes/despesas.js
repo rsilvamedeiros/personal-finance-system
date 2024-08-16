@@ -5,9 +5,11 @@ const Despesa = require("../models/Despesa");
 // Obter todas as despesas
 router.get("/", async (req, res) => {
   try {
+    console.log("Requisição GET para /api/despesas recebida");
     const despesas = await Despesa.find();
     res.json(despesas);
   } catch (err) {
+    console.error("Erro ao buscar despesas:", err);
     res.status(500).json({ message: err.message });
   }
 });
