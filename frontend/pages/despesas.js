@@ -1,26 +1,28 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import DespesaForm from "../components/DespesaForm";
+import DespesaList from "../components/DespesaList";
 
-export default function Despesas() {
+const Despesas = () => {
   const [despesas, setDespesas] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/api/despesas")
-      .then((response) => setDespesas(response.data))
-      .catch((error) => console.error("Erro ao buscar despesas:", error));
+    const fetchDespesas = async () => {
+      const response = await axios.get("/api/despesas");
+      setDespesas(response.data);
+    };
+    fetchDespesas();
   }, []);
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold">Despesas</h1>
-      <ul>
-        {despesas.map((despesa) => (
-          <li key={despesa._id}>
-            {despesa.descricao}: R${despesa.valor}
-          </li>
-        ))}
-      </ul>
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">Despesas</h1>
+      <DespesaForm
+        onAdd={(novaDespesa) => setDespesas([...despesas, novaDespesa])}
+      />
+      <DespesaList despesas={despesas} />
     </div>
   );
-}
+};
+
+export default Despesas;
